@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <meta charset="UTF-8" />
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0" />
+        <title>WRBB Vortex Demo</title>
+    </head>
+    <body>
+        <h1>Show Recording Demo</h1>
+        <form name="myform" action="javascript:getapi();">
+          <label for="showSel">Choose a show:</label>
+          <select id="showSel" name="cars">
+            <option value="93759">Dog Pound Sports Sound</option>
+            <option value="251171">Husky Hotwire</option>
+          </select>
+          <input name="Submit"  type="submit" value="Go"/>
+        </form>
+        <h3>Recordings:</h3>
+        <!-- table for showing data -->
+        <table id="episodes"></table>
+    </body>
+</html>
