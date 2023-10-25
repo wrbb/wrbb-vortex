@@ -2,15 +2,15 @@ import { Container, Divider, Flex, Image, Text } from "theme-ui";
 import OldLogo from "./assets/oldlogo.svg";
 import Search from "./components/search";
 import { useState } from "react";
+import shows from "./data/shows.json";
 
 function Home() {
-  const [selectedShowID, setSelectedShowID] = useState<number>();
+  const [_, setSelectedShowID] = useState<number>();
+  console.log(shows.length);
 
-  const options = [
-    { label: "Bug Juice", value: 1 },
-    { label: "Jug Buice", value: 2 },
-    { label: "Space man", value: 3 },
-  ];
+  const options = shows.map((show) => {
+    return { label: show.name, value: show.id };
+  });
 
   return (
     <Container sx={{ height: "100vh" }}>
