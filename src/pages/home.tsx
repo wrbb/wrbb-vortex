@@ -1,12 +1,15 @@
 import { Container, Divider, Flex, Image, Text } from "theme-ui";
 import OldLogo from "../assets/oldlogo.svg";
 import Search from "../components/search";
-import { useState } from "react";
 import shows from "../data/shows.json";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
-  const [_, setSelectedShowID] = useState<number>();
-  console.log(shows.length);
+  const navigate = useNavigate();
+
+  const handleSelect = (showID: number) => {
+    navigate(`/show/${showID}`);
+  };
 
   const options = shows.map((show) => {
     return { label: show.name, value: show.id };
@@ -27,7 +30,7 @@ function Home() {
         <Divider sx={{ height: 8 }} />
         <Text variant="heading1">wrbb vortex</Text>
         <Divider sx={{ height: 4 }} />
-        <Search options={options} onChange={setSelectedShowID} />
+        <Search options={options} onChange={handleSelect} />
       </Flex>
     </Container>
   );
