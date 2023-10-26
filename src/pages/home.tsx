@@ -1,8 +1,8 @@
 import { Container, Divider, Flex, Image, Text } from "theme-ui";
-import OldLogo from "./assets/oldlogo.svg";
-import Search from "./components/search";
+import OldLogo from "../assets/oldlogo.svg";
+import Search from "../components/search";
 import { useState } from "react";
-import shows from "./data/shows.json";
+import shows from "../data/shows.json";
 
 function Home() {
   const [_, setSelectedShowID] = useState<number>();

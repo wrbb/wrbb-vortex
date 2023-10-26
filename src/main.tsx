@@ -1,14 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Home from "./home.tsx";
+import Home from "./pages/home.tsx";
 import { ThemeUIProvider } from "theme-ui";
 import { theme } from "./theme.ts";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Show from "./pages/show.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/show/:id",
+    element: <Show />,
   },
 ]);
 
