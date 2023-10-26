@@ -28,6 +28,10 @@ const selectStyle: StylesConfig = {
     color: `${theme.colors?.primary}`,
     marginLeft: 8,
   }),
+  indicatorsContainer: (base) => ({
+    ...base,
+    cursor: "pointer",
+  }),
   option: (base, state) => ({
     ...base,
     color: "black",
@@ -35,6 +39,7 @@ const selectStyle: StylesConfig = {
       state.isFocused ? theme.colors?.accent : theme.colors?.background
     }`,
     padding: 8,
+    cursor: "pointer",
     // TODO: Figure out why the option turns blue on click
   }),
   menu: (base) => ({
@@ -46,6 +51,7 @@ const selectStyle: StylesConfig = {
   placeholder: (base) => ({
     ...base,
     opacity: "50%",
+    cursor: "text",
   }),
 };
 
