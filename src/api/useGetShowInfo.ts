@@ -14,7 +14,7 @@ const useGetShowInfo = (showId: number) => {
       .then(({ data }) => {
         const showData: Show = {
           title: data.title,
-          description: data.description,
+          description: data.description.replace(/<[^>]*>/g, ""),
           since: data.since,
           image: data.image,
         };
