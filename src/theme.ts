@@ -13,7 +13,7 @@ export const theme: Theme = {
   },
   text: {
     default: {
-      color: red,
+      color: black,
     },
     body: {
       fontFamily: "sans-serif",
