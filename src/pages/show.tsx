@@ -1,7 +1,44 @@
+import { useNavigate, useParams } from "react-router-dom";
 import { Container } from "theme-ui";
+import useGetRecordings from "../api/useGetRecordings";
+import shows from "../data/shows.json";
+import { theme } from "../theme";
+import Recordings from "../components/recordings";
+import useGetShowInfo from "../api/useGetShowInfo";
+import ShowInfo from "../components/showinfo";
 
 const Show: React.FC = () => {
-  return <Container></Container>;
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const showIDNo = parseInt(id ?? "");
+  const {
+    data: recordingsData,
+    loading: recordingsLoading,
+    error: recordingsError,
+  } = useGetRecordings(showIDNo);
+  const {
+    data: showData,
+    loading: showLoading,
+    error: showError,
+  } = useGetShowInfo(showIDNo);
+  const showObj = shows.find((show) => show.id == showIDNo);
+
+  // redirect user to page if show is not found
+  if (!showObj) {
+    alert(`no show found for id ${id}`);
+    navigate("/");
+  }
+
+  return (
+    <Container sx={{ backgroundColor: theme.colors?.background }}>
+      <ShowInfo data={showData} loading={showLoading} error={showError} />
+      <Recordings
+        data={recordingsData}
+        loading={recordingsLoading}
+        error={recordingsError}
+      />
+    </Container>
+  );
 };
 
 export default Show;
