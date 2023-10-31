@@ -34,4 +34,7 @@ export const theme: Theme = {
       lineHeight: "1.2",
     },
   },
+  sizes: {
+    container: 960,
+  },
 };
