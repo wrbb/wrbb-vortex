@@ -59,7 +59,11 @@ const ShowInfo: React.FC<ShowDataProps> = ({
         src={data.image}
         height={180}
         width={180}
-        sx={{ border: `1px solid ${theme.colors?.primary}` }}
+        sx={{
+          border: `1px solid ${theme.colors?.primary}`,
+          minHeight: 180,
+          minWidth: 180,
+        }}
       />
       <Flex
         sx={{
