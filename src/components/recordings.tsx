@@ -9,25 +9,33 @@ interface RecordingsProps {
 }
 
 const Recordings: React.FC<RecordingsProps> = ({ data, loading, error }) => {
-  if (loading) {
+  if (loading || error || data.length == 0) {
     return (
-      <Flex sx={{ alignItems: "center", justifyContent: "center" }}>
-        <Spinner />
+      <Flex
+        sx={{
+          alignItems: "center",
+          justifyContent: "center",
+          height: "calc(100vh - 286px)",
+          flexDirection: "column",
+          flexGrow: 1,
+        }}
+      >
+        {loading ? (
+          <Spinner />
+        ) : error ? (
+          <Text variant="heading2">could not load recordings.</Text>
+        ) : (
+          <Text variant="heading2">no recordings found.</Text>
+        )}
       </Flex>
     );
   }
 
-  if (error) {
-    return <Text>error</Text>;
-  }
-
   return (
     <Box>
-      {data.length == 0 ? (
-        <Text>no recordings found</Text>
-      ) : (
-        data.map((rec) => <RecordingComponent data={rec} key={rec.id} />)
-      )}
+      {data.map((rec) => (
+        <RecordingComponent data={rec} key={rec.id} />
+      ))}
     </Box>
   );
 };
