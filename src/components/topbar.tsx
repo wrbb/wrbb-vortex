@@ -5,7 +5,7 @@ const TopBar: React.FC = () => {
   return (
     <Flex
       sx={{
-        borderBottom: `1px solid ${theme.colors?.primary}`,
+        borderBottom: `2px solid ${theme.colors?.primary}`,
         justifyContent: "center",
         py: 2,
       }}
