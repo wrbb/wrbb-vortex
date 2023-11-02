@@ -3,7 +3,7 @@ import { Show } from "../types/show";
 import { theme } from "../theme";
 
 interface ShowDataProps {
-  data: Show | undefined;
+  data: Show;
   loading: boolean;
   error: boolean;
   fallbackTitle: string;
@@ -15,7 +15,7 @@ const ShowInfo: React.FC<ShowDataProps> = ({
   error,
   fallbackTitle,
 }) => {
-  if (loading || !data) {
+  if (loading) {
     return (
       <Flex
         sx={{

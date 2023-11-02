@@ -36,7 +36,7 @@ const Show: React.FC = () => {
       <Topbar />
       <Container sx={{ backgroundColor: theme.colors?.background }}>
         <ShowInfo
-          data={showData}
+          data={showData!}
           loading={showLoading}
           error={showError}
           fallbackTitle={showObj.name}
