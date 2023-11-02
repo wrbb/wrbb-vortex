@@ -11,19 +11,20 @@ export const theme: Theme = {
   },
   text: {
     body: {
-      fontFamily: "sans-serif",
+      fontFamily: "Gambarino, serif",
       fontSize: "16px",
       lineHeight: "1.5",
     },
     // Heading styles
     heading1: {
-      fontFamily: "serif",
+      fontFamily: "Gambarino, serif",
       fontSize: "2rem",
-      fontWeight: "bold",
+      fontWeight: "800",
       lineHeight: "1.2",
     },
     heading2: {
-      fontFamily: "serif",
+      fontFamily: "Gambarino, serif",
+
       fontSize: "1.5rem",
       fontWeight: "bold",
       lineHeight: "1.2",
