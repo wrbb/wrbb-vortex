@@ -10,6 +10,7 @@ export const theme: Theme = {
     secondary: black,
     background: "#F7F5ED",
     accent: "#FCC5C5",
+    muted: "#AC0C0C",
   },
   text: {
     default: {
@@ -35,6 +36,6 @@ export const theme: Theme = {
     },
   },
   sizes: {
-    container: 960,
+    container: 800,
   },
 };
