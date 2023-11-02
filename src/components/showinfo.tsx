@@ -6,9 +6,15 @@ interface ShowDataProps {
   data: Show | undefined;
   loading: boolean;
   error: boolean;
+  fallbackTitle: string;
 }
 
-const ShowInfo: React.FC<ShowDataProps> = ({ data, loading, error }) => {
+const ShowInfo: React.FC<ShowDataProps> = ({
+  data,
+  loading,
+  error,
+  fallbackTitle,
+}) => {
   if (loading || !data) {
     return (
       <Flex
@@ -25,7 +31,17 @@ const ShowInfo: React.FC<ShowDataProps> = ({ data, loading, error }) => {
   }
 
   if (error) {
-    return <Text>error</Text>;
+    return (
+      <Flex
+        sx={{
+          px: 3,
+          py: 3,
+          borderBottom: `2px solid ${theme.colors?.primary}`,
+        }}
+      >
+        <Text variant="heading1">Recordings for {fallbackTitle}</Text>
+      </Flex>
+    );
   }
 
   return (

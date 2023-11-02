@@ -27,13 +27,19 @@ const Show: React.FC = () => {
   // redirect user to home page if the show is not found
   if (!showObj) {
     navigate("/");
+    return;
   }
 
   return (
     <Box>
       <Topbar />
       <Container sx={{ backgroundColor: theme.colors?.background }}>
-        <ShowInfo data={showData} loading={showLoading} error={showError} />
+        <ShowInfo
+          data={showData}
+          loading={showLoading}
+          error={showError}
+          fallbackTitle={showObj.name}
+        />
         <Recordings
           data={recordingsData}
           loading={recordingsLoading}
