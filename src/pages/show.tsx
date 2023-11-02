@@ -7,6 +7,7 @@ import Recordings from "../components/recordings";
 import useGetShowInfo from "../api/useGetShowInfo";
 import ShowInfo from "../components/showinfo";
 import Topbar from "../components/topbar";
+import BottomBar from "../components/bottombar";
 
 const Show: React.FC = () => {
   const { id } = useParams();
@@ -31,7 +32,7 @@ const Show: React.FC = () => {
   }
 
   return (
-    <Box>
+    <Box sx={{ position: "relative", minHeight: "100vh" }}>
       <Topbar />
       <Container sx={{ backgroundColor: theme.colors?.background }}>
         <ShowInfo
@@ -46,6 +47,7 @@ const Show: React.FC = () => {
           error={recordingsError}
         />
       </Container>
+      <BottomBar />
     </Box>
   );
 };

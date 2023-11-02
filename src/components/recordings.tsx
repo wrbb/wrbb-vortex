@@ -32,7 +32,7 @@ const Recordings: React.FC<RecordingsProps> = ({ data, loading, error }) => {
   }
 
   return (
-    <Box>
+    <Box sx={{ paddingBottom: 5 }}>
       {data.map((rec) => (
         <RecordingComponent data={rec} key={rec.id} />
       ))}

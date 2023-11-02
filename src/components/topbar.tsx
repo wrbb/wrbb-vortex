@@ -7,7 +7,7 @@ const TopBar: React.FC = () => {
       sx={{
         borderBottom: `1px solid ${theme.colors?.primary}`,
         justifyContent: "center",
-        py:1,
+        py: 2,
       }}
     >
       <Link href="/" sx={{ textDecoration: "none" }}>
