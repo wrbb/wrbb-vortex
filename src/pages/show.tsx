@@ -1,11 +1,12 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { Container } from "theme-ui";
+import { Box, Container } from "theme-ui";
 import useGetRecordings from "../api/useGetRecordings";
 import shows from "../data/shows.json";
 import { theme } from "../theme";
 import Recordings from "../components/recordings";
 import useGetShowInfo from "../api/useGetShowInfo";
 import ShowInfo from "../components/showinfo";
+import Topbar from "../components/topbar";
 
 const Show: React.FC = () => {
   const { id } = useParams();
@@ -30,14 +31,17 @@ const Show: React.FC = () => {
   }
 
   return (
-    <Container sx={{ backgroundColor: theme.colors?.background }}>
-      <ShowInfo data={showData} loading={showLoading} error={showError} />
-      <Recordings
-        data={recordingsData}
-        loading={recordingsLoading}
-        error={recordingsError}
-      />
-    </Container>
+    <Box>
+      <Topbar />
+      <Container sx={{ backgroundColor: theme.colors?.background }}>
+        <ShowInfo data={showData} loading={showLoading} error={showError} />
+        <Recordings
+          data={recordingsData}
+          loading={recordingsLoading}
+          error={recordingsError}
+        />
+      </Container>
+    </Box>
   );
 };
 
