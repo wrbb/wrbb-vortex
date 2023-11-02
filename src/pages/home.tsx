@@ -28,7 +28,7 @@ function Home() {
       >
         <Image src={OldLogo} height={180} width={180} />
         <Divider sx={{ height: 8 }} />
-        <Text variant="heading1">wrbb vortex</Text>
+        <Text variant="heading1">vortex</Text>
         <Divider sx={{ height: 4 }} />
         <Search options={options} onChange={handleSelect} />
       </Flex>
