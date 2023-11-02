@@ -24,9 +24,8 @@ const Show: React.FC = () => {
   } = useGetShowInfo(showIDNo);
   const showObj = shows.find((show) => show.id == showIDNo);
 
-  // redirect user to page if show is not found
+  // redirect user to home page if the show is not found
   if (!showObj) {
-    alert(`no show found for id ${id}`);
     navigate("/");
   }
 
