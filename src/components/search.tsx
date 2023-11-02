@@ -40,7 +40,6 @@ const selectStyle: StylesConfig = {
     }`,
     padding: 8,
     cursor: "pointer",
-    // TODO: Figure out why the option turns blue on click
   }),
   menu: (base) => ({
     ...base,
@@ -53,13 +52,19 @@ const selectStyle: StylesConfig = {
     opacity: "50%",
     cursor: "text",
   }),
+  noOptionsMessage: (base) => ({
+    ...base,
+    paddingTop: 8,
+    paddingBottom: 8,
+    fontWeight: 800,
+  }),
 };
 
 const Search: React.FC<SearchProps> = ({ options, onChange }) => {
   return (
     <Select
       placeholder="search for a show"
-      noOptionsMessage={() => "no shows found"}
+      noOptionsMessage={() => "no shows found."}
       options={options}
       styles={selectStyle}
       onChange={(val: Option | unknown) => {
