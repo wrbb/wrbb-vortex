@@ -4,6 +4,7 @@ import Search from "../components/search";
 import shows from "../data/shows.json";
 import { useNavigate } from "react-router-dom";
 import BottomBar from "../components/bottombar";
+import { useEffect } from "react";
 
 function Home() {
   const navigate = useNavigate();
@@ -11,6 +12,10 @@ function Home() {
   const handleSelect = (showID: number) => {
     navigate(`/show/${showID}`);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const options = shows.map((show) => {
     return { label: show.name, value: show.id };

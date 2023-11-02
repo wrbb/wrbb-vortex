@@ -8,6 +8,7 @@ import useGetShowInfo from "../api/useGetShowInfo";
 import ShowInfo from "../components/showinfo";
 import Topbar from "../components/topbar";
 import BottomBar from "../components/bottombar";
+import { useEffect } from "react";
 
 const Show: React.FC = () => {
   const { id } = useParams();
@@ -30,6 +31,10 @@ const Show: React.FC = () => {
     navigate("/");
     return;
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Box sx={{ position: "relative", minHeight: "100vh" }}>
