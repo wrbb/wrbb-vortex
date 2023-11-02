@@ -15,7 +15,6 @@ export const theme: Theme = {
       fontSize: "16px",
       lineHeight: "1.5",
     },
-    // Heading styles
     heading1: {
       fontFamily: "Gambarino, serif",
       fontSize: "2rem",
@@ -24,7 +23,6 @@ export const theme: Theme = {
     },
     heading2: {
       fontFamily: "Gambarino, serif",
-
       fontSize: "1.5rem",
       fontWeight: "bold",
       lineHeight: "1.2",
