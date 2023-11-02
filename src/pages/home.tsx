@@ -17,9 +17,11 @@ function Home() {
     window.scrollTo(0, 0);
   }, []);
 
-  const options = shows.map((show) => {
-    return { label: show.name, value: show.id };
-  });
+  const options = shows
+    .map((show) => {
+      return { label: show.name, value: show.id };
+    })
+    .sort((a, b) => a.label.localeCompare(b.label));
 
   return (
     <Box sx={{ position: "relative", minHeight: "100vh" }}>
