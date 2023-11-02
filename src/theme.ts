@@ -27,8 +27,15 @@ export const theme: Theme = {
       fontWeight: "bold",
       lineHeight: "1.2",
     },
+    heading3: {
+      fontFamily: "Gambarino, serif",
+      fontSize: "1.2rem",
+      fontWeight: "bold",
+      lineHeight: "1.2",
+    },
   },
   sizes: {
     container: 800,
   },
+  breakpoints: ["480px", "768px", "1024px", "1440px"],
 };
