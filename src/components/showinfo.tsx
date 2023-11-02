@@ -11,7 +11,14 @@ interface ShowDataProps {
 const ShowInfo: React.FC<ShowDataProps> = ({ data, loading, error }) => {
   if (loading || !data) {
     return (
-      <Flex sx={{ justifyContent: "center", alignItems: "center" }}>
+      <Flex
+        sx={{
+          justifyContent: "center",
+          alignItems: "center",
+          height: 246,
+          borderBottom: `2px solid ${theme.colors?.primary}`,
+        }}
+      >
         <Spinner />
       </Flex>
     );
