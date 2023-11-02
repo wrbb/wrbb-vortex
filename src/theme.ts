@@ -1,21 +1,15 @@
 import type { Theme } from "theme-ui";
 
-const red = "#d30f0f";
-const black = "#191819";
-
 export const theme: Theme = {
   colors: {
-    text: black,
-    primary: red,
-    secondary: black,
+    text: "#191819",
+    primary: "#D30F0F",
+    secondary: "#E98787",
     background: "#F7F5ED",
     accent: "#FCC5C5",
     muted: "#AC0C0C",
   },
   text: {
-    default: {
-      color: black,
-    },
     body: {
       fontFamily: "sans-serif",
       fontSize: "16px",
