@@ -20,3 +20,13 @@
 body {
   font-family: 'Gambarino, serif';
 }
+
+::-moz-selection {
+  background: #FCC5C5;
+}
+::-webkit-selection {
+  background: #FCC5C5;
+}
+::selection {
+  background: #FCC5C5;
+}

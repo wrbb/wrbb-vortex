@@ -5,7 +5,7 @@ import { ThemeUIProvider } from "theme-ui";
 import { theme } from "./theme.ts";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Show from "./pages/show.tsx";
-import "./fonts.css";
+import "./main.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
