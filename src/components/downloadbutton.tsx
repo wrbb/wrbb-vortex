@@ -24,8 +24,8 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({ url }) => {
         sx={{
           backgroundColor: theme.colors?.primary,
           borderRadius: "50%",
-          height: 24,
-          width: 24,
+          height: [36, 24],
+          width: [36, 24],
           cursor: "pointer",
           ":hover": {
             backgroundColor: isClicked
