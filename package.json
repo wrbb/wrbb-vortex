@@ -12,7 +12,9 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "axios": "^1.5.1",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.17.0",
     "react-select": "^5.7.7",
@@ -20,6 +22,7 @@
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
+    "@types/react-copy-to-clipboard": "^5.0.6",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
