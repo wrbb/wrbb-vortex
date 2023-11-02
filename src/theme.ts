@@ -35,7 +35,7 @@ export const theme: Theme = {
     },
   },
   sizes: {
-    container: 800,
+    container: 768,
   },
   breakpoints: ["480px", "768px", "1024px", "1440px"],
 };
