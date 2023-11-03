@@ -24,7 +24,7 @@ const BottomBar: React.FC = () => {
       <Text>
         made by{" "}
         <Link
-          href="https://instagram.com/z.roth"
+          href="https://zroth.dev"
           sx={{ color: theme.colors?.text }}
         >
           zack roth
