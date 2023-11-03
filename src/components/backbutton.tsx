@@ -21,6 +21,7 @@ const BackButton: React.FC<BackButtonProps> = ({ onClick, sx }) => {
           ":active": {
             backgroundColor: "rgba(19, 18, 19, 0.1)",
           },
+          marginLeft: -1,
         }),
         ...sx,
       }}
