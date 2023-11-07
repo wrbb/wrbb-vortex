@@ -72,6 +72,7 @@ const PasswordModal: React.FC = () => {
             setInputText(event.target.value);
           }}
           onSubmit={handleSubmit}
+          autoFocus
         />
         <Flex sx={{ justifyContent: "space-around" }}>
           <Button
