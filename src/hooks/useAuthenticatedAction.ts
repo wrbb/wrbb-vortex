@@ -1,6 +1,6 @@
 import Cookies from "js-cookie";
 import { useContext } from "react";
-import { ModalContext } from "../components/modalcontext";
+import { ModalContext } from "../contexts/modalcontext";
 
 // If isAuthenticated, do an action, else show password modal
 const useAuthenticatedAction = (action: () => void) => {
