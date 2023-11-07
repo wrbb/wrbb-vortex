@@ -59,6 +59,7 @@ const PasswordModal: React.FC = () => {
         )}
         <Input
           sx={{
+            fontFamily: "Gambarino, serif",
             border: `1px solid ${theme.colors?.primary}`,
             ":focus": {
               outline: "red",
