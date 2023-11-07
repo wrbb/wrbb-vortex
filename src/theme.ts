@@ -37,5 +37,34 @@ export const theme: Theme = {
   sizes: {
     container: 768,
   },
+  buttons: {
+    primary: {
+      fontFamily: "Gambarino, serif",
+      cursor: "pointer",
+      backgroundColor: "primary",
+      borderRadius: 0,
+      color: "background",
+      ":hover": {
+        opacity: "90%",
+      },
+      ":active": {
+        backgroundColor: "muted",
+      },
+    },
+    secondary: {
+      fontFamily: "Gambarino, serif",
+      cursor: "pointer",
+      backgroundColor: "background",
+      color: "primary",
+      border: "1px solid #D30F0F",
+      borderRadius: 0,
+      ":hover": {
+        backgroundColor: "rgba(19, 18, 19, 0.05)",
+      },
+      ":active": {
+        backgroundColor: "rgba(19, 18, 19, 0.1)",
+      },
+    },
+  },
   breakpoints: ["480px", "768px", "1024px", "1440px"],
 };
