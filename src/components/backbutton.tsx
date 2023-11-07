@@ -27,7 +27,7 @@ const BackButton: React.FC<BackButtonProps> = ({ onClick, sx }) => {
       }}
       onClick={onClick}
     >
-      <IconButton aria-label="back">
+      <IconButton aria-label="back" sx={{ cursor: "pointer" }}>
         <svg
           width="24px"
           height="24px"
