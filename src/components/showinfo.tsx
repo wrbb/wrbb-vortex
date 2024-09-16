@@ -35,11 +35,11 @@ const ShowInfo: React.FC<ShowDataProps> = ({
       <Flex
         sx={{
           px: 3,
-          py: 3,
+          py: 4,
           borderBottom: `2px solid ${theme.colors?.primary}`,
         }}
       >
-        <Text variant="heading1">Recordings for {fallbackTitle}</Text>
+        <Text variant="heading1">recordings archive for {fallbackTitle}</Text>
       </Flex>
     );
   }
