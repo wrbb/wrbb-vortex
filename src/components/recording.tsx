@@ -17,7 +17,7 @@ const Recording: React.FC<RecordingProps> = ({ data }) => {
       sx={{
         borderBottom: `1px solid ${theme.colors?.primary}`,
         py: 2,
-        px: 3,
+        px: [24, 3],
         justifyContent: "space-between",
         height: 96,
       }}

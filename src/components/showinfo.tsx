@@ -50,8 +50,8 @@ const ShowInfo: React.FC<ShowDataProps> = ({
         flexDirection: ["column", "row"],
         borderBottom: `2px solid ${theme.colors?.primary}`,
         gap: 3,
-        py: 4,
-        px: 3,
+        py: [16, 4],
+        px: [24, 3],
         alignItems: "center",
       }}
     >
