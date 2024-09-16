@@ -34,12 +34,14 @@ const ShowInfo: React.FC<ShowDataProps> = ({
     return (
       <Flex
         sx={{
-          px: 3,
+          px: [24, 3],
           py: 4,
           borderBottom: `2px solid ${theme.colors?.primary}`,
+          flexDirection: "column",
         }}
       >
-        <Text variant="heading1">recordings archive for {fallbackTitle}</Text>
+        <Text variant="heading3">recordings archive for </Text>
+        <Text variant="heading1">{fallbackTitle}</Text>
       </Flex>
     );
   }
