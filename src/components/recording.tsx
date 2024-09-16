@@ -1,5 +1,5 @@
 import { Flex, Text } from "theme-ui";
-import { Recording } from "../types/recording";
+import type { Recording } from "../types/Recording";
 import { theme } from "../theme";
 import DownloadButton from "./downloadbutton";
 import moment from "moment";
