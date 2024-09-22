@@ -1,9 +1,9 @@
 import { Flex, Text } from "theme-ui";
 import type { Recording } from "../types/Recording";
 import { theme } from "../theme";
-import DownloadButton from "./downloadbutton";
 import moment from "moment";
 import CopyButton from "./copybutton";
+import PlayButton from "./playbutton";
 
 interface RecordingProps {
   data: Recording;
@@ -27,7 +27,7 @@ const Recording: React.FC<RecordingProps> = ({ data }) => {
       </Text>
       <Flex sx={{ alignSelf: "flex-end", gap: 1 }}>
         <CopyButton url={data.url} />
-        <DownloadButton url={data.url} />
+        <PlayButton url={data.url} />
       </Flex>
     </Flex>
   );
