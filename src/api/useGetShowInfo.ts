@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Show } from "../types/show";
+import { Show } from "../types/Show";
 import axios from "axios";
 
 const useGetShowInfo = (showId: number) => {

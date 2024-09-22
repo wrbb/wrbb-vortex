@@ -7,7 +7,7 @@ const BottomBar: React.FC = () => {
       sx={{
         px: 3,
         py: 2,
-        justifyContent: "flex-end",
+        justifyContent: "center",
         gap: 2,
         position: "absolute",
         bottom: 0,
@@ -15,7 +15,7 @@ const BottomBar: React.FC = () => {
       }}
     >
       <Text>
-        © 2023{" "}
+        © 2024{" "}
         <Link href="https://wrbbradio.org" sx={{ color: theme.colors?.text }}>
           WRBB
         </Link>

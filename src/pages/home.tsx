@@ -1,13 +1,14 @@
-import { Box, Container, Divider, Flex, Image, Text } from "theme-ui";
+import { Container, Divider, Image, Text } from "theme-ui";
 import OldLogo from "../assets/oldlogo.svg";
 import Search from "../components/search";
-import shows from "../data/shows.json";
 import { useNavigate } from "react-router-dom";
 import BottomBar from "../components/bottombar";
 import { useEffect } from "react";
+import useGetShows from "../api/useGetShows";
 
 function Home() {
   const navigate = useNavigate();
+  const { data: showsData, loading, error } = useGetShows();
 
   const handleSelect = (showID: number) => {
     navigate(`/show/${showID}`);
@@ -17,32 +18,37 @@ function Home() {
     window.scrollTo(0, 0);
   }, []);
 
-  const options = shows
-    .map((show) => {
-      return { label: show.name, value: show.id };
-    })
-    .sort((a, b) => a.label.localeCompare(b.label));
+  const options = showsData
+    ? showsData
+        .map((show) => {
+          return { label: show.name, value: show.id };
+        })
+        .sort((a, b) => a.label.localeCompare(b.label))
+    : [];
 
   return (
-    <Box sx={{ position: "relative", minHeight: "100vh" }}>
-      <Container sx={{ height: "100vh" }}>
-        <Flex
-          sx={{
-            flexDirection: "column",
-            alignItems: "center",
-            flex: 1,
-            pt: 80,
-          }}
-        >
-          <Image src={OldLogo} height={180} width={180} />
-          <Divider sx={{ height: 8 }} />
-          <Text variant="heading1">vortex</Text>
-          <Divider sx={{ height: 4 }} />
-          <Search options={options} onChange={handleSelect} />
-        </Flex>
-      </Container>
+    <Container
+      sx={{
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        flex: 1,
+        pt: 80,
+      }}
+    >
+      <Image src={OldLogo} height={180} width={180} />
+      <Divider sx={{ height: 8 }} />
+      <Text variant="heading1">vortex</Text>
+      <Divider sx={{ height: 4 }} />
+      <Search
+        options={options}
+        onChange={handleSelect}
+        loading={loading}
+        error={error}
+      />
       <BottomBar />
-    </Box>
+    </Container>
   );
 }
 

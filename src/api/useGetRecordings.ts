@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Recording, RecordingRaw } from "../types/recording";
+import { Recording, RecordingRaw } from "../types/Recording";
 
 const useGetRecordings = (showId: number) => {
   const [data, setData] = useState<Recording[]>([]);
