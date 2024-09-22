@@ -94,7 +94,7 @@ const Search: React.FC<SearchProps> = ({
           flexDirection: "column",
           alignItems: "center",
           gap: 2,
-          px: 24,
+          px: [24, 3],
           textAlign: "center",
         }}
       >
