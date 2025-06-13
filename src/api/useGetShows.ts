@@ -12,7 +12,7 @@ const useGetShows = (): UseGetShowsModel => {
   const [data, setData] = useState<ShowRaw[]>();
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<boolean>(false);
-  const apiURL = `http://localhost:3000/getShows`;
+  const apiURL = `https://api.wrbbradio.org/getShows`;
 
   useEffect(() => {
     axios
