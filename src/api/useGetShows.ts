@@ -18,26 +18,10 @@ const useGetShows = (): UseGetShowsModel => {
     axios
       .get(apiURL)
       .then((response) => {
-        // Parse the schedule strings from all years and combine them
-        const allShowsData: ShowRaw[] = response.data.result.reduce((shows: ShowRaw[], yearData: any) => {
-          try {
-            const scheduleData = JSON.parse(yearData.schedule);
-            const yearShows = scheduleData.map((show: any) => ({
-              name: show.title,
-              id: show.show_id,
-            }));
-
-            // Filter out shows that already exist in the accumulator
-            const uniqueShows = yearShows.filter(
-              (show) => !shows.some((existingShow) => existingShow.id === show.id)
-            );
-
-            return [...shows, ...uniqueShows];
-          } catch (err) {
-            console.error(`Error parsing schedule for year ${yearData._id}:`, err);
-            return shows;
-          }
-        }, []);
+        const allShowsData: ShowRaw[] = response.data.map((show: any) => ({
+          name: show.title,
+          id: show.id,
+        }));
 
         if (allShowsData.length === 0) {
           console.error("No shows found.")
