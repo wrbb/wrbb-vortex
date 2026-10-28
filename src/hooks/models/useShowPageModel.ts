@@ -2,8 +2,8 @@ import { SetStateAction, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import useGetRecordings from "../../api/useGetRecordings";
 import useGetShowInfo from "../../api/useGetShowInfo";
-import { Show } from "../../types/Show";
-import { Recording } from "../../types/Recording";
+import { Show } from "../../types/show";
+import { Recording } from "../../types/recording";
 import useGetShows from "../../api/useGetShows";
 
 interface ShowPageModel {

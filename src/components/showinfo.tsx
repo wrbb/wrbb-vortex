@@ -1,5 +1,5 @@
 import { Flex, Spinner, Text, Image } from "theme-ui";
-import { Show } from "../types/Show";
+import { Show } from "../types/show";
 import { theme } from "../theme";
 
 interface ShowDataProps {

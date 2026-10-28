@@ -1,6 +1,6 @@
 import { Box, Flex, Spinner, Text } from "theme-ui";
 import RecordingComponent from "./recording";
-import { Recording } from "../types/Recording";
+import { Recording } from "../types/recording";
 
 interface RecordingsProps {
   data: Recording[];
