@@ -1,13 +1,15 @@
 import { useContext, useState } from "react";
-import Modal from "react-modal";
+import ReactModal from "react-modal";
+// Cast to fix react-modal/TypeScript 5.x class refs incompatibility
+const Modal = ReactModal as unknown as React.ComponentType<ReactModal.Props>;
 import { Button, Flex, Input, Text } from "theme-ui";
 import { ModalContext } from "../contexts/modalcontext";
 import { theme } from "../theme";
 import Cookies from "js-cookie";
 
-Modal.setAppElement("#root");
+ReactModal.setAppElement("#root");
 
-const style: Modal.Styles = {
+const style: ReactModal.Styles = {
   content: {
     top: "50%",
     left: "50%",
